@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>Xitami Console</ProjectName>
+    <ProjectName>Xitami WTP</ProjectName>
     <SccProjectName />
     <SccLocalPath />
-    <ProjectGuid>{359C7A1A-409F-4E61-B17F-1B9FC4464BED}</ProjectGuid>
+    <ProjectGuid>{1423BD65-F699-4618-8B08-52AFD660732E}</ProjectGuid>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -46,13 +46,13 @@
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\$(TargetName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>xidos32</TargetName>
+    <TargetName>xiwtp</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\$(TargetName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>xidos32</TargetName>
+    <TargetName>xiwtp</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,9 +126,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\xitami.c" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="gsl.vcxproj">
       <Project>{6aa86a37-ab56-4e4a-a8a4-69b96d0761f3}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -149,6 +146,9 @@
       <Project>{62890f77-00bc-4a8e-a8d2-c8d3bc90e44b}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\xiwtp.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

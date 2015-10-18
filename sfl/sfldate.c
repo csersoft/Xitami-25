@@ -927,6 +927,15 @@ gmt_to_local (long gmt_date, long gmt_time, long *date, long *time)
 struct tm
 *safe_localtime (const time_t *time_secs)
 {
+#ifdef _MSC_VER
+    struct tm
+      *time_struct;
+
+    time_struct = localtime(time_secs);
+    ASSERT(time_struct);               /*  MUST be valid now...             */
+
+    return (time_struct);
+#else
     qbyte
         adjusted_time;
     struct tm
@@ -945,6 +954,7 @@ struct tm
     time_struct-> tm_year += adjust_years;
 
     return (time_struct);
+#endif
 }
 
 
@@ -958,6 +968,15 @@ struct tm
 struct tm
 *safe_gmtime (const time_t *time_secs)
 {
+#ifdef _MSC_VER
+    struct tm
+      *time_struct;
+
+    time_struct = gmtime(time_secs);
+
+    return (time_struct);
+#else
+
     qbyte
         adjusted_time;
     struct tm
@@ -976,6 +995,7 @@ struct tm
         time_struct-> tm_year += adjust_years;
 
     return (time_struct);
+#endif
 }
 
 /*  ---------------------------------------------------------------------[<]-

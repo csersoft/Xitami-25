@@ -21,6 +21,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "studio", "studio.vcxproj", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xiadmin", "xiadmin.vcxproj", "{62890F77-00BC-4A8E-A8D2-C8D3BC90E44B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xitami Lite", "Xitami_Lite.vcxproj", "{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xitami Log File Translator", "Xitami_Log_File_Translator.vcxproj", "{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xitami WTP", "Xitami_WTP.vcxproj", "{1423BD65-F699-4618-8B08-52AFD660732E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -82,6 +88,24 @@ Global
 		{62890F77-00BC-4A8E-A8D2-C8D3BC90E44B}.Release|x86.Build.0 = Release|Win32
 		{62890F77-00BC-4A8E-A8D2-C8D3BC90E44B}.Template|x86.ActiveCfg = Template|Win32
 		{62890F77-00BC-4A8E-A8D2-C8D3BC90E44B}.Template|x86.Build.0 = Template|Win32
+		{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}.Debug|x86.ActiveCfg = Debug|Win32
+		{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}.Debug|x86.Build.0 = Debug|Win32
+		{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}.Release|x86.ActiveCfg = Release|Win32
+		{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}.Release|x86.Build.0 = Release|Win32
+		{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}.Template|x86.ActiveCfg = Release|Win32
+		{4FACC0AC-E33D-4AE7-9DA4-4D280B6AAE0E}.Template|x86.Build.0 = Release|Win32
+		{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}.Debug|x86.ActiveCfg = Debug|Win32
+		{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}.Debug|x86.Build.0 = Debug|Win32
+		{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}.Release|x86.ActiveCfg = Release|Win32
+		{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}.Release|x86.Build.0 = Release|Win32
+		{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}.Template|x86.ActiveCfg = Release|Win32
+		{7D7B8D9B-593E-4F41-B464-A09FD150BFC3}.Template|x86.Build.0 = Release|Win32
+		{1423BD65-F699-4618-8B08-52AFD660732E}.Debug|x86.ActiveCfg = Debug|Win32
+		{1423BD65-F699-4618-8B08-52AFD660732E}.Debug|x86.Build.0 = Debug|Win32
+		{1423BD65-F699-4618-8B08-52AFD660732E}.Release|x86.ActiveCfg = Release|Win32
+		{1423BD65-F699-4618-8B08-52AFD660732E}.Release|x86.Build.0 = Release|Win32
+		{1423BD65-F699-4618-8B08-52AFD660732E}.Template|x86.ActiveCfg = Release|Win32
+		{1423BD65-F699-4618-8B08-52AFD660732E}.Template|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
