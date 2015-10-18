@@ -19,6 +19,7 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{7DEC54A7-C469-40AE-B126-1D6F4A0A825E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
@@ -27,12 +28,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -51,14 +52,18 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\Release\</OutDir>
-    <IntDir>.\Release\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\$(TargetName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>xicpl32</TargetName>
+    <TargetExt>.cpl</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\debug\</OutDir>
-    <IntDir>.\debug\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\$(TargetName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>xicpl32</TargetName>
+    <TargetExt>.cpl</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -71,10 +76,11 @@
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>..;..\..\sfl;..\..\smt;..\..\gsl;..\..\studio;..\..\xiadmin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\Release\Xitami_Control_Panel.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\Release\</ObjectFileName>
-      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -96,8 +102,8 @@
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <OutputFile>xicpl32.cpl</OutputFile>
-      <ImportLibrary>.\Release\xicpl32.lib</ImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\xicpl32.lib</ImportLibrary>
       <AdditionalDependencies>mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\xicpl32.def</ModuleDefinitionFile>
     </Link>
@@ -114,10 +120,10 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..;..\..\sfl;..\..\smt;..\..\gsl;..\..\studio;..\..\xiadmin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AssemblerListingLocation>.\debug\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\debug\Xitami_Control_Panel.pch</PrecompiledHeaderOutputFile>
-      <ObjectFileName>.\debug\</ObjectFileName>
-      <ProgramDataBaseFileName>.\debug\</ProgramDataBaseFileName>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -140,11 +146,16 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <OutputFile>xicpl32.cpl</OutputFile>
-      <ImportLibrary>.\debug\xicpl32.lib</ImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\xicpl32.lib</ImportLibrary>
       <AdditionalDependencies>mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\xicpl32.def</ModuleDefinitionFile>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="xicpl32.c" />
@@ -170,13 +181,6 @@
     <Image Include="on.bmp" />
     <Image Include="on.ico" />
     <Image Include="xitami1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="libgsl.lib" />
-    <Library Include="libsfl.lib" />
-    <Library Include="libsmt.lib" />
-    <Library Include="libstu.lib" />
-    <Library Include="libxac.lib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="gsl.vcxproj">

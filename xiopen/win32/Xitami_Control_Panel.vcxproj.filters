@@ -65,13 +65,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="libsfl.lib" />
-    <Library Include="libstu.lib" />
-    <Library Include="libgsl.lib" />
-    <Library Include="libsmt.lib" />
-    <Library Include="libxac.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="xicpl32.def">
       <Filter>Source Files</Filter>
     </CustomBuild>

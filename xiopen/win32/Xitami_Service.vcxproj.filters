@@ -19,11 +19,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Library Include="libxac.lib" />
-    <Library Include="libsmt.lib" />
-    <Library Include="libgsl.lib" />
-    <Library Include="libstu.lib" />
-    <Library Include="libsfl.lib" />
-  </ItemGroup>
 </Project>
