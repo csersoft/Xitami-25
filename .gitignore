@@ -17,3 +17,5 @@ xiopen/xixlat
 *.pdb
 *.tlog
 Release
+/xiopen/win32/.vs/xitami/v14/.suo
+/xiopen/win32/.vs
