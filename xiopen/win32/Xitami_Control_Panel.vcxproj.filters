@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{49fd59c9-8965-4692-b7b3-37b0e4a87059}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e0055b4d-38e7-4e2a-a8cb-1f5205605f89}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{7296d880-6ca3-401e-bc34-3a5ea4746a79}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xicpl32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="xiwin.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="about.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="active.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bug100.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="imatix1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="off.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="off.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="on.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="on.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="xitami1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libsfl.lib" />
+    <Library Include="libstu.lib" />
+    <Library Include="libgsl.lib" />
+    <Library Include="libsmt.lib" />
+    <Library Include="libxac.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="xicpl32.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
