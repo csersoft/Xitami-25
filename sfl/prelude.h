@@ -519,7 +519,11 @@ void  sys_assert  (const char *filename, unsigned line_number);
  *  value.                                                                   */
 
 #undef  TIMEZONE
-#define TIMEZONE    timezone            /*  Unless redefined later           */
+#if (defined (__WINDOWS__) || defined (__CYGWIN__))
+#   define TIMEZONE   _timezone
+#else
+#   define TIMEZONE    timezone         /*  Unless redefined later           */
+#endif
 
 /*  UNIX defines sleep() in terms of second; Win32 defines Sleep() in
  *  terms of milliseconds.  We want to be able to use sleep() anywhere.      */

@@ -11,6 +11,9 @@
 #include "sfl.h"
 #include "formio.h"
 
+#ifdef environ
+#undef environ
+#endif
 
 /*  Constants defining size of tables, etc.                                  */
 

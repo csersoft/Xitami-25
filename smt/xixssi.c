@@ -40,6 +40,10 @@
 #include "smtdefn.h"                    /*  SMT definitions                  */
 #include "smthttpl.h"                   /*  SMT HTTP definitions             */
 
+#ifdef environ
+#undef environ
+#endif
+
 /*- Definitions -------------------------------------------------------------*/
 
 #ifdef AGENT_NAME
